@@ -109,27 +109,16 @@ function findLargestPrimeFactor(n) {
     7793, 7817, 7823, 7829, 7841, 7853, 7867, 7873, 7877, 7879, 7883, 7901,
     7907, 7919,
   ];
-  let primesUsed = [];
   let primesIndex = 0;
   while (!(n <= 1)) {
     if (primes[primesIndex] == undefined) {
       return;
     }
-    console.log(`n: ${n}`);
-    console.log(`primeIndex: ${primesIndex}`);
     if (n % primes[primesIndex] == 0) {
-      primesUsed.push(primes[primesIndex]);
-      console.log(
-        `1: ${n} % ${primes[primesIndex]} == ${n / primes[primesIndex]}`
-      );
       n = n / primes[primesIndex];
     } else {
-      console.log(
-        `0: ${n} % ${primes[primesIndex]} == ${n / primes[primesIndex]}`
-      );
       primesIndex++;
     }
-    console.log(primesUsed);
   }
   return primes[primesIndex];
 }
