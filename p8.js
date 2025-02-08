@@ -7,11 +7,9 @@ function greatestProduct(number, numDigits) {
   let product = 1;
   let products = [];
   number = number.replace(/\s/g, "");
-  // console.log(number.length);
   while (true) {
     endIndex = startIndex + numDigits;
     digits = number.slice(startIndex, endIndex).split("");
-    // console.log(digits);
     for (let i = 0; i < digits.length; i++) {
       if (digits[i] == "\n") {
         continue;
